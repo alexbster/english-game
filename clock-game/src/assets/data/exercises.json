@@ -1,0 +1,93 @@
+[
+  {
+    "time": "wakeUp",
+    "images": ["assets/images/wakeup/01.jpg", "assets/images/wakeup/02.jpg", "assets/images/wakeup/03.jpg"],
+    "expressions": [
+      { "label": "I wake up at _hour_ o'clock.", "hours": [6, 7], "minutes": [0] },
+      { "label": "I wake up at quarter past _hour_.", "hours": [6, 7], "minutes": [15] },
+      { "label": "I wake up at half past _hour_.", "hours": [6, 7], "minutes": [30] },
+      { "label": "I wake up at quarter to _hour_.", "hours": [7, 8], "minutes": [45], "hourAdjustment": -1 }
+    ]
+  },
+  {
+    "time": "haveBreakfast",
+    "images": ["assets/images/breakfast/01.jpg", "assets/images/breakfast/02.jpg", "assets/images/breakfast/03.jpg"],
+    "expressions": [
+      { "label": "I have breakfast at _hour_ o'clock.", "hours": [7, 8], "minutes": [0] },
+      { "label": "I have breakfast at half past _hour_.", "hours": [7, 8], "minutes": [30] },
+      { "label": "I have breakfast at quarter to _hour_.", "hours": [8, 9], "minutes": [45], "hourAdjustment": -1 }
+    ]
+  },
+  {
+    "time": "goToSchool",
+    "images": ["assets/images/gotoschool/01.jpg", "assets/images/gotoschool/02.jpg", "assets/images/gotoschool/03.jpg"],
+    "expressions": [
+      { "label": "I go to school at _hour_ o'clock.", "hours": [7, 8], "minutes": [0] },
+      { "label": "I go to school at quarter past _hour_.", "hours": [8], "minutes": [15] },
+      { "label": "I go to school at quarter to _hour_.", "hours": [9], "minutes": [45], "hourAdjustment": -1 }
+    ]
+  },
+  {
+    "time": "startClass",
+    "images": ["assets/images/startclass/01.jpg", "assets/images/startclass/02.jpg", "assets/images/startclass/03.jpg"],
+    "expressions": [
+      { "label": "My class starts at _hour_ o'clock.", "hours": [8, 9], "minutes": [0] },
+      { "label": "My class starts at half past _hour_.", "hours": [8], "minutes": [30] },
+      { "label": "My class starts at quarter to _hour_.", "hours": [9, 10], "minutes": [45], "hourAdjustment": -1 }
+    ]
+  },
+  {
+    "time": "haveLunch",
+    "images": ["assets/images/lunch/01.jpg", "assets/images/lunch/02.jpg", "assets/images/lunch/03.jpg"],
+    "expressions": [
+      { "label": "I have lunch at _hour_ o'clock.", "hours": [12, 1], "minutes": [0] },
+      { "label": "I have lunch at half past _hour_.", "hours": [12, 1], "minutes": [30] },
+      { "label": "I have lunch at quarter to _hour_.", "hours": [1, 2], "minutes": [45], "hourAdjustment": -1 }
+    ]
+  },
+  {
+    "time": "doHomework",
+    "images": ["assets/images/homework/01.jpg", "assets/images/homework/02.jpg", "assets/images/homework/03.jpg"],
+    "expressions": [
+      { "label": "I do my homework at _hour_ o'clock.", "hours": [2, 3], "minutes": [0] },
+      { "label": "I do my homework at quarter past _hour_.", "hours": [3], "minutes": [15] },
+      { "label": "I do my homework at quarter to _hour_.", "hours": [4], "minutes": [45], "hourAdjustment": -1 }
+    ]
+  },
+  {
+    "time": "playTime",
+    "images": ["assets/images/play/01.jpg", "assets/images/play/02.jpg", "assets/images/play/03.jpg"],
+    "expressions": [
+      { "label": "I play at _hour_ o'clock.", "hours": [4, 5], "minutes": [0] },
+      { "label": "I play at half past _hour_.", "hours": [4], "minutes": [30] },
+      { "label": "I play at quarter to _hour_.", "hours": [6], "minutes": [45], "hourAdjustment": -1 }
+    ]
+  },
+  {
+    "time": "takeShower",
+    "images": ["assets/images/shower/01.jpg", "assets/images/shower/02.jpg", "assets/images/shower/03.jpg"],
+    "expressions": [
+      { "label": "I take a shower at _hour_ o'clock.", "hours": [6, 7], "minutes": [0] },
+      { "label": "I take a shower at quarter past _hour_.", "hours": [6], "minutes": [15] },
+      { "label": "I take a shower at quarter to _hour_.", "hours": [8], "minutes": [45], "hourAdjustment": -1 }
+    ]
+  },
+  {
+    "time": "haveDinner",
+    "images": ["assets/images/dinner/01.jpg", "assets/images/dinner/02.jpg", "assets/images/dinner/03.jpg"],
+    "expressions": [
+      { "label": "I have dinner at _hour_ o'clock.", "hours": [6, 7], "minutes": [0] },
+      { "label": "I have dinner at half past _hour_.", "hours": [7], "minutes": [30] },
+      { "label": "I have dinner at quarter to _hour_.", "hours": [8], "minutes": [45], "hourAdjustment": -1 }
+    ]
+  },
+  {
+    "time": "goToBed",
+    "images": ["assets/images/bedtime/01.jpg", "assets/images/bedtime/02.jpg", "assets/images/bedtime/03.jpg"],
+    "expressions": [
+      { "label": "I go to bed at _hour_ o'clock.", "hours": [8, 9], "minutes": [0] },
+      { "label": "I go to bed at quarter past _hour_.", "hours": [8], "minutes": [15] },
+      { "label": "I go to bed at quarter to _hour_.", "hours": [9, 10], "minutes": [45], "hourAdjustment": -1 }
+    ]
+  }
+]

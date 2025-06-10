@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col">
+    <h1>Clock Game</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="p-3 text-center">
+      <div class="exercise bg-light">
+        <img class="img" src="{{this.current.image}}" width="60%" alt="Image" *ngIf="this.current !== undefined">
+        <p class="fs-2">
+          {{ this.current == undefined ? 'Loading...' : this.current.expression }}
+        </p>
+        <div>
+          <button class="btn btn-success m-2" (click)="check()">Check Answer</button>
+          <button class="btn btn-info m-2" (click)="processExercise()">Next</button>
+        </div>
+      </div>
+      <img class="img" src="./assets/gifs/welldone.gif" width="40%" alt="Well done" *ngIf="this.welldoneToggle == true">
+      <img class="img" src="./assets/gifs/wrong.gif" width="40%" alt="Try again" *ngIf="this.welldoneToggle == false">
+      <p class="fw-lighter fs-2">{{ result }}</p>
+    </div>
+  </div>
+  <div class="col-sm-6 text-center">
+    <p class="fw-lighter">Set the correct time on the clock</p>
+    <div id="loading_div" style="display: none;">
+      <h2>
+        Interactive Clock </h2>
+      <div><img src="assets/images/loader_circles_black.gif" width="64" height="64" alt="loading"> </div>
+      <div class="action">LOADING</div>
+    </div>
+    <div id="game_container" style="display: inline; width: 100%;">
+      <div id="game">
+        <canvas pointer-events="all" id="canvasStage" width="780" height="750" style=" width:60%; height:60%;"></canvas>
+        <svg id="stage" style="position:absolute;top:0px; left:0px;" viewBox="0 0 780 750"
+          preserveAspectRatio="xMinYMin" pointer-events="none">
+          <g id="svgStage" pointer-events="none">
+            <rect id="area" width="780" height="750" fill="#ffffff" fill-opacity="0" stroke="#000000" stroke-opacity="0"
+              stroke-width="0"></rect>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+  <router-outlet />
