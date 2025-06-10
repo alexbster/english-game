@@ -81,6 +81,7 @@ export class AppComponent implements OnInit, OnDestroy {
   loadClock() {
     console.log('Cargando reloj...');
     window.addEventListener("load", initMain8, false);
+    initMain8();
     console.log('Reloj cargado');
   }
 
