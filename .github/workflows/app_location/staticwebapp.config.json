@@ -1,0 +1,6 @@
+{
+    "mimeTypes": {
+        ".json": "text/json",
+        ".svg": "image/svg+xml"
+    }
+}
