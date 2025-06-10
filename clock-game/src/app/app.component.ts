@@ -5,6 +5,7 @@ import { ClockExercise, ClockExerciseTemplate } from './clock-exercise.model';
 import { ExerciseGeneratorService } from './exercise-generator.service';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { initMain8 } from '../assets/scripts/main8.js';
 
 declare global {
   interface Window {
@@ -35,11 +36,19 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private http: HttpClient, private generator: ExerciseGeneratorService) { }
 
   ngOnInit(): void {
+    
+  }
 
+  ngAfterContentInit(): void {
+    // Aquí puedes realizar acciones adicionales después de que el contenido se haya inicializado
+    console.log('Contenido inicializado');
+    // Por ejemplo, podrías llamar a un método para cargar datos o inicializar componentes
+    // this.loadExercises(); // Si deseas cargar ejercicios inmediatamente
+    window.addEventListener("load", initMain8, false);
     window.addEventListener('timeClockAssigned', this.handler);
-
     this.loadHours();
   }
+  
 
   private loadExercises() {
     this.http.get('assets/data/exercises.json').subscribe({

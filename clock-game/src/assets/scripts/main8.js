@@ -508,53 +508,53 @@ function clock(x, y, hour, minute, scale) {
       limit = 150;
       hour = 8;
     } else
-    if (angle >= 120) {
-      limit = 120;
-      hour = 7;
-    } else
-    if (angle >= 90) {
-      limit = 90;
-      hour = 6;
-    } else
-    if (angle >= 60) {
-      limit = 60;
-      hour = 5;
-    } else
-    if (angle >= 30) {
-      limit = 30;
-      hour = 4;
-    } else
-    if (angle >= 0) {
-      limit = 0;
-      hour = 3;
-    } else
-    if (angle >= -30) {
-      limit = -30;
-      hour = 2;
-    } else
-    if (angle >= -60) {
-      limit = -60;
-      hour = 1;
-    } else
-    if (angle >= -90) {
-      limit = -90;
-      hour = 12;
-    } else
-    if (angle >= -120) {
-      limit = -120;
-      hour = 11;
-    } else
-    if (angle >= -150) {
-      limit = -150;
-      hour = 10;
-    } else
-    if (angle >= -180) {
-      limit = -180;
-      hour = 9;
-    } else {
-      limit = -180;
-      hour = 9;
-    }
+      if (angle >= 120) {
+        limit = 120;
+        hour = 7;
+      } else
+        if (angle >= 90) {
+          limit = 90;
+          hour = 6;
+        } else
+          if (angle >= 60) {
+            limit = 60;
+            hour = 5;
+          } else
+            if (angle >= 30) {
+              limit = 30;
+              hour = 4;
+            } else
+              if (angle >= 0) {
+                limit = 0;
+                hour = 3;
+              } else
+                if (angle >= -30) {
+                  limit = -30;
+                  hour = 2;
+                } else
+                  if (angle >= -60) {
+                    limit = -60;
+                    hour = 1;
+                  } else
+                    if (angle >= -90) {
+                      limit = -90;
+                      hour = 12;
+                    } else
+                      if (angle >= -120) {
+                        limit = -120;
+                        hour = 11;
+                      } else
+                        if (angle >= -150) {
+                          limit = -150;
+                          hour = 10;
+                        } else
+                          if (angle >= -180) {
+                            limit = -180;
+                            hour = 9;
+                          } else {
+                            limit = -180;
+                            hour = 9;
+                          }
     if (hour_type == 24) {
       if (hour == 12) {
         if (previous_hour == 11) {
@@ -632,15 +632,15 @@ function clock(x, y, hour, minute, scale) {
       if (previous_hour == 11 && hour == 12) {
         change_am_pm = true;
       } else
-      if (previous_hour == 12 && hour == 11) {
-        change_am_pm = true;
-      } else
-      if (previous_hour == 23 && hour == 0) {
-        change_am_pm = true;
-      } else
-      if (previous_hour == 0 && hour == 23) {
-        change_am_pm = true;
-      }
+        if (previous_hour == 12 && hour == 11) {
+          change_am_pm = true;
+        } else
+          if (previous_hour == 23 && hour == 0) {
+            change_am_pm = true;
+          } else
+            if (previous_hour == 0 && hour == 23) {
+              change_am_pm = true;
+            }
     }
     if (change_am_pm) {
       if (am_pm_value == "AM") {
@@ -680,3 +680,7 @@ function clock(x, y, hour, minute, scale) {
     return dist;
   }
 }
+
+module.exports = {
+  initMain8: initMain8
+};
