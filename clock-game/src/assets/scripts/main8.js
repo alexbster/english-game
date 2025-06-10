@@ -1,7 +1,9 @@
 var stage;
 var clock1;
 
-function init() {
+function initMain8() {
+
+  console.log("init in main8.js");
   document.getElementById('game_container').style.display = "inline";
   document.getElementById('loading_div').style.display = "none";
 
