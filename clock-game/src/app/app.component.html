@@ -8,16 +8,13 @@
     <div class="text-center">
       <div class="exercise bg-light pb-2">
         <p class="fw-lighter">Look the picture and read the statement.</p>
-        <img class="img img-thumbnail" src="{{this.current.image}}" alt="Image" *ngIf="this.current !== undefined">
+        <img class="img img-thumbnail" src="{{this.current.image}}" width="70%" alt="Image" *ngIf="this.current !== undefined">
         <p class="fs-2">
           {{ this.current == undefined ? 'Loading...' : this.current.expression }}
         </p>
-        <div>
-          <button class="btn btn-success m-2" (click)="check()">Check Answer</button>
-          <button class="btn btn-info m-2" (click)="processExercise()">Next</button>
-        </div>
+
       </div>
-      <p class="fw-lighter fs-2">{{ result }}</p>
+
     </div>
   </div>
   <div class="col-sm-7 text-center">
@@ -40,6 +37,10 @@
         </svg>
       </div>
     </div>
-
+    <div>
+      <button class="btn btn-success m-2" (click)="check()">Check Answer</button>
+      <button class="btn btn-info m-2" (click)="processExercise()">Next</button>
+    </div>
+    <p class="fw-lighter fs-2">{{ result }}</p>
   </div>
   <router-outlet />
