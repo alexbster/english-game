@@ -6,6 +6,7 @@ import { ExerciseGeneratorService } from './exercise-generator.service';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { initMain8 } from '../assets/scripts/main8.js';
+import { ToastrService } from 'ngx-toastr';
 
 declare global {
   interface Window {
@@ -15,10 +16,10 @@ declare global {
 }
 
 @Component({
-    selector: 'app-root',
-    imports: [RouterOutlet, HttpClientModule, CommonModule],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.css'
+  selector: 'app-root',
+  imports: [RouterOutlet, HttpClientModule, CommonModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit, OnDestroy {
 
@@ -32,10 +33,10 @@ export class AppComponent implements OnInit, OnDestroy {
   hours: Map<number, string> = new Map<number, string>();
   minutes: Map<number, string> = new Map<number, string>();
 
-  constructor(private http: HttpClient, private generator: ExerciseGeneratorService) { }
+  constructor(private http: HttpClient, private generator: ExerciseGeneratorService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    
+
   }
 
   ngAfterContentInit(): void {
@@ -47,7 +48,7 @@ export class AppComponent implements OnInit, OnDestroy {
     window.addEventListener('timeClockAssigned', this.handler);
     this.loadHours();
   }
-  
+
 
   private loadExercises() {
     this.http.get('assets/data/exercises.json').subscribe({
@@ -116,8 +117,8 @@ export class AppComponent implements OnInit, OnDestroy {
       this.welldoneToggle = true;
     } else {
       this.result = `❌ Try again. The correct time is ${this.formatTime(this.current.correctHour, this.current.correctMinute)}`;
-      this.showWarning(this.result);   
-      this.welldoneToggle = false; 
+      this.showWarning(this.result);
+      this.welldoneToggle = false;
     }
   }
 
@@ -132,9 +133,9 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   showSuccess() {
-    //this.toast.success('Great job, try the next', 'Well done', 3000);
+    this.toastr.success('<img class="img" src="./assets/gifs/welldone.gif" width="100px" alt="Well done"/> Great job, try the next', 'Well done');
   }
-  showWarning(message:string) {
-    //this.toast.warning(message, 'Ops.', 3000);
+  showWarning(message: string) {
+    this.toastr.warning('<img class="img" src="./assets/gifs/wrong.gif" width="100px" alt="Try again" />' + message, 'Ops.');
   }
 }
