@@ -79,7 +79,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
 
-  private loadExercises() {
+  loadExercises() {
     this.http.get('assets/data/exercises.json').subscribe({
       next: (res) => {
         this.data = res as ClockExerciseTemplate[];

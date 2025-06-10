@@ -17,11 +17,12 @@
   </div>
   <div class="col-sm-7 text-center">
     <p class="fw-lighter">Set the correct time on the clock</p>
-    <div id="loading_div" style="display: none;">
+    <div id="loading_div" style="display: block;">
       <h2>
         Interactive Clock </h2>
       <div><img src="assets/images/loader_circles_black.gif" width="64" height="64" alt="loading"> </div>
-      <div class="action">LOADING</div>
+      <br />
+      <button class="btn btn-secondary" (click)="loadExercises()">Cargar</button>
     </div>
     <div id="game_container" style="display: inline; width: 100%;">
       <div id="game">
