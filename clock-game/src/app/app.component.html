@@ -12,9 +12,7 @@
         <p class="fs-2">
           {{ this.current == undefined ? 'Loading...' : this.current.expression }}
         </p>
-
       </div>
-
     </div>
   </div>
   <div class="col-sm-7 text-center">
@@ -37,9 +35,9 @@
         </svg>
       </div>
     </div>
-    <div>
-      <button class="btn btn-success m-2" (click)="check()">Check Answer</button>
-      <button class="btn btn-info m-2" (click)="processExercise()">Next</button>
+    <div class="d-grid gap-2">
+      <button class="btn btn-success m-2 btn-lg" (click)="check()">Check Answer</button>
+      <button class="btn btn-info m-2 btn-lg" (click)="processExercise()">Next</button>
     </div>
     <p class="fw-lighter fs-2">{{ result }}</p>
   </div>

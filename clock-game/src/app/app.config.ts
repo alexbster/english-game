@@ -10,7 +10,7 @@ export const appConfig: ApplicationConfig = {
   provideAnimations(), // Required for animations
   provideToastr({
       timeOut: 10000,
-      positionClass: 'toast-bottom-full-width',
+      positionClass: 'toast-bottom-right',
       preventDuplicates: true,
       enableHtml: true,
       closeButton: true,

@@ -32,6 +32,35 @@ export class AppComponent implements OnInit, OnDestroy {
   result = '';
   hours: Map<number, string> = new Map<number, string>();
   minutes: Map<number, string> = new Map<number, string>();
+  successImages: string[] = [
+    './assets/gifs/success00.gif',
+    './assets/gifs/success01.gif',
+    './assets/gifs/success02.gif',
+    './assets/gifs/success03.gif',
+    './assets/gifs/success04.gif',
+    './assets/gifs/success05.gif',
+    './assets/gifs/success06.gif',
+    './assets/gifs/success07.gif',
+    './assets/gifs/success08.gif',
+    './assets/gifs/success09.gif',
+    './assets/gifs/success10.gif',
+    './assets/gifs/success11.gif',
+    './assets/gifs/success12.gif',
+    './assets/gifs/success13.gif',
+  ]
+  wrongImages: string[] = [
+    './assets/gifs/wrong00.gif',
+    './assets/gifs/wrong01.gif',
+    './assets/gifs/wrong02.gif',
+    './assets/gifs/wrong03.gif',
+    './assets/gifs/wrong04.gif',
+    './assets/gifs/wrong05.gif',
+    './assets/gifs/wrong06.gif',
+    './assets/gifs/wrong07.gif',
+    './assets/gifs/wrong08.gif',
+    './assets/gifs/wrong09.gif',
+    './assets/gifs/wrong10.gif',
+  ]
 
   constructor(private http: HttpClient, private generator: ExerciseGeneratorService, private toastr: ToastrService) { }
 
@@ -133,9 +162,9 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   showSuccess() {
-    this.toastr.success('<img class="img" src="./assets/gifs/welldone.gif" width="100px" alt="Well done"/> Great job, try the next', 'Well done');
+    this.toastr.success('<img class="img" src="'+ this.successImages[Math.floor(Math.random() * this.successImages.length)] +'" width="200px" alt="Well done"/><p class="fs-2">Great job, try the next</p>', 'Well done');
   }
   showWarning(message: string) {
-    this.toastr.warning('<img class="img" src="./assets/gifs/wrong.gif" width="100px" alt="Try again" />' + message, 'Ops.');
+    this.toastr.warning('<img class="img" src="'+ this.wrongImages[Math.floor(Math.random() * this.wrongImages.length)] +'" width="200px" alt="Try again" /><p class="fs-2">' + message + '</p>', 'Ops.');
   }
 }
